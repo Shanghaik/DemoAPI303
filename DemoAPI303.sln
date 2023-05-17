@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPIConsole", "TestAPICo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPIMVC", "TestAPIMVC\TestAPIMVC.csproj", "{8579A03B-E0DA-4E02-B3A4-0C687861518D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{56121DAE-1BE1-4383-810E-AE2CC1409E51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{8579A03B-E0DA-4E02-B3A4-0C687861518D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8579A03B-E0DA-4E02-B3A4-0C687861518D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8579A03B-E0DA-4E02-B3A4-0C687861518D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56121DAE-1BE1-4383-810E-AE2CC1409E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56121DAE-1BE1-4383-810E-AE2CC1409E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56121DAE-1BE1-4383-810E-AE2CC1409E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56121DAE-1BE1-4383-810E-AE2CC1409E51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
