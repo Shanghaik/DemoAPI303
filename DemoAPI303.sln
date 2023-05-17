@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoAPI303", "DemoAPI303\De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApiByWinform", "TestApiByWinform\TestApiByWinform.csproj", "{7EBF65E9-7336-4D52-86D9-C8291C1981A8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAPIConsole", "TestAPIConsole\TestAPIConsole.csproj", "{8AFBBFEF-0615-44D2-9D19-E8394FA235C0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7EBF65E9-7336-4D52-86D9-C8291C1981A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EBF65E9-7336-4D52-86D9-C8291C1981A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EBF65E9-7336-4D52-86D9-C8291C1981A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AFBBFEF-0615-44D2-9D19-E8394FA235C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AFBBFEF-0615-44D2-9D19-E8394FA235C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AFBBFEF-0615-44D2-9D19-E8394FA235C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AFBBFEF-0615-44D2-9D19-E8394FA235C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -25,11 +25,14 @@ namespace TestApiByWinform
             
             double weight = Convert.ToDouble(tbt_Weight.Text);
             double height = Convert.ToDouble(tbt_Height.Text);
-            string apiUrl = $"https://localhost:7087/WeatherForecast/Tinh-bmi?weight={weight}&height={height}";
+            // Tạo chuỗi Json kết quả khi nhập tham số cho API
+            string apiUrl = 
+                $"https://localhost:7087/TinhToan/Tinh-bmi?weight={weight}&height={height}";
             var httpClient = new HttpClient(); // tạo ra để callApi
-            var response = await httpClient.GetAsync(apiUrl);
+            var response = await httpClient.GetAsync(apiUrl);// Lấy dữ liệu ra
             // Lấy dữ liệu Json trả về từ Api được call dạng string
             string apiData = await response.Content.ReadAsStringAsync();
+            // Lấy kqua trả về từ API
             // Đọc từ string Json vừa thu được sang List<T>
             double bmi = JsonConvert.DeserializeObject<double>(apiData);
             btn_Result.Text = bmi.ToString();

@@ -3,7 +3,7 @@
 namespace DemoAPI303.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("TinhToan")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
