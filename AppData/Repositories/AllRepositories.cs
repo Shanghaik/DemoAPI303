@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace AppData.Repositories
 {
-    internal class AllRepositories<T> : IAllRepositories<T> where T : class
+    public class AllRepositories<T> : IAllRepositories<T> where T : class
     {
-        private readonly FINALASS_FPOLYSHOP_FA22_SOF205__SOF2041Context context;
-        private readonly DbSet<T> dbset;
+        private FINALASS_FPOLYSHOP_FA22_SOF205__SOF2041Context context;
+        private DbSet<T> dbset;
 
         public AllRepositories()
         {
@@ -23,12 +23,16 @@ namespace AppData.Repositories
             this.dbset = dbset;
         }
 
+        public FINALASS_FPOLYSHOP_FA22_SOF205__SOF2041Context Context => context;
+
+        public DbSet<T> Dbset => dbset;
+
         public bool AddItem(T item)
         {
             try
             {
-                dbset.Add(item);   // Thêm vào Dbset
-                context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
+                Dbset.Add(item);   // Thêm vào Dbset
+                Context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
                 return true;
             }
             catch (Exception)
@@ -41,8 +45,8 @@ namespace AppData.Repositories
         {
             try
             {         
-                dbset.Update(item);   // Sửa trong Dbset
-                context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
+                Dbset.Update(item);   // Sửa trong Dbset
+                Context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
                 return true;
             }
             catch (Exception)
@@ -53,15 +57,15 @@ namespace AppData.Repositories
 
         public IEnumerable<T> GetAll()
         {
-            return dbset.ToList();
+            return Dbset.ToList();
         }
 
         public bool RemoveItem(T item)
         {
             try
             {
-                dbset.Remove(item);   // Sửa trong Dbset
-                context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
+                Dbset.Remove(item);   // Sửa trong Dbset
+                Context.SaveChanges();  // Lưu lại trạng thái thay đổi DbContext
                 return true;
             }
             catch (Exception)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AppData.IRepositories
 {
-    internal interface IAllRepositories<T>
+    public interface IAllRepositories<T>
     {
         public IEnumerable<T> GetAll(); // Lấy ra
         public bool AddItem(T item); // Thêm mới
