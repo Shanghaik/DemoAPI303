@@ -30,28 +30,37 @@ namespace AppApi.Controllers
         }
 
         // GET api/<ValuesController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
+        [HttpGet("{name}")]
+        public IEnumerable<SanPham> Get(string name) // Tìm theo tên
         {
-            return "value";
+            return repos.GetAll().Where(p => p.Ten.Contains(name));
         }
 
         // POST api/<ValuesController>
-        [HttpPost]
-        public void Post([FromBody] string value)
+        [HttpPost("create-sanpham")]
+        public bool CreateSanpham(string ma, string ten)
         {
+            SanPham sp = new SanPham();
+            sp.Ma = ma; sp.Ten = ten; 
+            sp.Id = Guid.NewGuid();
+            return repos.AddItem(sp);
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public bool Put(Guid id, string ma, string ten)
         {
+            var sp = repos.GetAll().First(p => p.Id == id); 
+            sp.Ten = ten; sp.Ma = ma;
+            return repos.EditItem(sp);  
         }
 
         // DELETE api/<ValuesController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(Guid id)
         {
+            var sp = repos.GetAll().First(p => p.Id == id);
+            return repos.RemoveItem(sp);
         }
     }
 }
