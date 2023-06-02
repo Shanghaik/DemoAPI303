@@ -42,7 +42,7 @@ namespace AppViews.Controllers
          * Trong cơ chế sử dụng thread pool, thì mỗi thread sẽ không bao giờ rảnh nếu
          * số lượng tác vụ đang hoạt động > số thread
          * VD chip có 20 luồng thì nếu số lượng tác vụ > 20 thì các luồng này sẽ luận 
-         * phiên hoạt động cho đến khi hoàn tất tất cả
+         * phiên hoạt động cho đến khi hoàn tất tất cả  
          */
     }
 }
